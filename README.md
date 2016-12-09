@@ -3,7 +3,7 @@
 
 [ตัวอย่าง](http://www.shenlong18hit.com/hiragana)
 
-
+![alt text](https://raw.githubusercontent.com/Tanandara/hiragana/master/example.PNG "ตัวอย่าง")
 
 
 
