@@ -1,12 +1,73 @@
-
 // ตั้งค่าตัวอักษร
-var hiragana = "あいうえおかきくけこさしすせそ";
-var romanji =
-[
-  "a","i","u","e","o",
-  "ka","ki","ku","ke","ko",
-  "sa","shi","su","se","so"
-]
+/* var hiragana = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
+   var romanji =
+   [
+     "a",   "i",   "u",    "e",    "o",
+     "ka",  "ki",  "ku",   "ke",   "ko",
+     "sa",  "shi", "su",   "se",   "so",
+     "ta",  "chi", "tsu",  "te",   "to",
+     "na",  "ni",  "nu",   "ne",   "no",
+     "ha",  "hi",  "fu",   "he",   "ho",
+     "ma",  "mi",  "mu",   "me",   "mo",
+     "ya",         "yu",           "yo",
+     "ra",  "ri",  "ru",   "re",   "ro",
+     "wa",                         "wo","nn"
+
+   ]
+*/
+var hiragana;
+var romanji;
+function hiragana_level_change(level){
+  switch (level) {
+    case "1":
+                hiragana = "あいうえおかきくけこさしすせそ";
+                romanji =
+                [
+                  "a",   "i",   "u",    "e",    "o",
+                  "ka",  "ki",  "ku",   "ke",   "ko",
+                  "sa",  "shi", "su",   "se",   "so"
+                ];
+      break;
+    case "2":
+                hiragana = "たちつてとなにぬねのはひふへほ";
+                romanji =
+                [
+                  "ta",  "chi", "tsu",  "te",   "to",
+                  "na",  "ni",  "nu",   "ne",   "no",
+                  "ha",  "hi",  "fu",   "he",   "ho"
+                ];
+      break;
+    case "3":
+                hiragana = "まみむめもやゆよらりるれろわをん";
+                romanji =
+                [
+                  "ma",  "mi",  "mu",   "me",   "mo",
+                  "ya",         "yu",           "yo",
+                  "ra",  "ri",  "ru",   "re",   "ro",
+                  "wa",                         "wo","nn"
+                ];
+      break;
+    default:
+                hiragana = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
+                romanji =
+                [
+                  "a",   "i",   "u",    "e",    "o",
+                  "ka",  "ki",  "ku",   "ke",   "ko",
+                  "sa",  "shi", "su",   "se",   "so",
+                  "ta",  "chi", "tsu",  "te",   "to",
+                  "na",  "ni",  "nu",   "ne",   "no",
+                  "ha",  "hi",  "fu",   "he",   "ho",
+                  "ma",  "mi",  "mu",   "me",   "mo",
+                  "ya",         "yu",           "yo",
+                  "ra",  "ri",  "ru",   "re",   "ro",
+                  "wa",                         "wo","nn"
+
+                ];
+
+  }
+  random_char();
+}
+hiragana_level_change("init");
 
 // คะแนน
 var score = 0;
@@ -43,6 +104,23 @@ $(function(){
       }
       return false;    //<---- Add this line
     }
+  });
+
+  $('#hiragana_level').tooltip({
+    title :
+            "======================= "+
+            "ระดับของตัวอักษรมีอยู่ 3 ระดับให้เลือก \r\n"+
+            "======================= \r\n"+
+            "ระดับ 1 จะมีอยู่ 15 ตัวอักษรได้แก่ \r\n"+
+            "あいうえおかきくけこさしすせそ \r\n"+
+            "\r\n"+
+            "ระดับ 2 จะมีอยู่ 15 ตัวอักษรได้แก่ \r\n"+
+            "たちつてとなにぬねのはひふへほ \r\n"+
+            "\r\n"+
+            "ระดับ 3 จะมีอยู่ 16 ตัวอักษรได้แก่ \r\n"+
+            "まみむめもやゆよらりるれろわをん \r\n"
+    ,
+    placement : "bottom"
   });
 
 });

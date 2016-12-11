@@ -39,10 +39,25 @@
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
+            <li class="nav-item">
+              <select id="hiragana_level" class="form-control" onchange="hiragana_level_change(this.value)">
+                <option value="all" selected="selected"  >ตัวอักษรทั้งหมด</option>
+                <option value="1">ตัวอักษรชุดที่ 1</option>
+                <option value="2">ตัวอักษรชุดที่ 2</option>
+                <option value="3">ตัวอักษรชุดที่ 3</option>
+              </select>
+            </li>
+            <style media="screen">
+            .tooltip-inner {
+              max-width: 250px;
+              /* If max-width does not work, try using width instead */
+              width: 250px;
+              white-space:pre-wrap;
+            }
+            </style>
           </ul>
           <form class="form-inline float-xs-right">
             <div class="col-md-12">
-
               <div class="col-md-7"><span id="timer" style="font-size:20px;color:red"></span></div>
               <div class="col-md-5"><input id="score" class="form-control" style="width: 60px;text-align:center" type="text" placeholder="Score" value="0"></div>
             </div>
@@ -96,6 +111,51 @@
                 <input type="button" class="btn btn-info"  value="se" id="se" />
                 <input type="button" class="btn btn-info"  value="so" id="so" />
               </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="ta" id="ta" />
+                <input type="button" class="btn btn-info"  value="chi" id="chi" />
+                <input type="button" class="btn btn-info"  value="tsu" id="tsu" />
+                <input type="button" class="btn btn-info"  value="te" id="te" />
+                <input type="button" class="btn btn-info"  value="to" id="to" />
+              </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="na" id="na" />
+                <input type="button" class="btn btn-info"  value="ni" id="ni" />
+                <input type="button" class="btn btn-info"  value="nu" id="nu" />
+                <input type="button" class="btn btn-info"  value="ne" id="ne" />
+                <input type="button" class="btn btn-info"  value="no" id="no" />
+              </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="ha" id="ha" />
+                <input type="button" class="btn btn-info"  value="hi" id="hi" />
+                <input type="button" class="btn btn-info"  value="fu" id="fu" />
+                <input type="button" class="btn btn-info"  value="he" id="he" />
+                <input type="button" class="btn btn-info"  value="ho" id="ho" />
+              </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="ma" id="ma" />
+                <input type="button" class="btn btn-info"  value="mi" id="mi" />
+                <input type="button" class="btn btn-info"  value="mu" id="mu" />
+                <input type="button" class="btn btn-info"  value="me" id="me" />
+                <input type="button" class="btn btn-info"  value="mo" id="mo" />
+              </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="ya" id="ya"  style="margin-right:105px"/>
+                <input type="button" class="btn btn-info"  value="yu" id="yu" />
+                <input type="button" class="btn btn-info"  value="yo" id="yo"  style="margin-left:105px"/>
+              </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="ra" id="ra" />
+                <input type="button" class="btn btn-info"  value="ri" id="ri" />
+                <input type="button" class="btn btn-info"  value="ru" id="ru" />
+                <input type="button" class="btn btn-info"  value="re" id="re" />
+                <input type="button" class="btn btn-info"  value="ro" id="ro" />
+              </div>
+              <div class="col-md-12" style="text-align: center;padding-top:10px">
+                <input type="button" class="btn btn-info"  value="wa" id="wa" style="margin-right:105px"/>
+                <input type="button" class="btn btn-info"  value="wo" id="wo" />
+                <input type="button" class="btn btn-info"  value="nn" id="nn" style="margin-left:105px"/>
+              </div>
             </div>
           </div>
           <div class="tab-pane" id="romanji_text" role="tabpanel">
@@ -119,7 +179,7 @@
     </div> <!-- /container -->
     <style>
       #hiragana-button input{
-        font-size:50px;
+        font-size:25px;
         font-weight: bolder;
         width:100px;
       }
