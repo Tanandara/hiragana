@@ -301,6 +301,7 @@ function check_result(button_value,text){
     hiragana.indexOf(text) == romanji.indexOf(button_value) ||
     hiragana.indexOf(text) == hiragana.indexOf(button_value)
     ){
+    speak();
     count+=3;
     toastr.success("+1 score");
     toastr.success("+2 seconds");
@@ -384,4 +385,10 @@ function gameover(){
   score=0;
   $("#score").val(score);
   $('#myModal').modal('show');
+}
+
+
+function speak(){
+  //var url = "https://translate.google.com/translate.tts?ie=UTF-8&q=" + $("#random_char").text() +"&tl=ja&&total=1&idx=0&textlen=1&tk=994568.617104&client=t&prev=input";
+  //$("#speak_japan").attr("src",url);
 }
