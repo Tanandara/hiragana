@@ -45,6 +45,10 @@
                 <option value="1">ตัวอักษรชุดที่ 1</option>
                 <option value="2">ตัวอักษรชุดที่ 2</option>
                 <option value="3">ตัวอักษรชุดที่ 3</option>
+                <option value="1-3">รวมชุดที่ 1 - 3</option>
+                <option value="4">ตัวอักษรชุดที่ 4</option>
+                <option value="1-4">รวมชุดที่ 1 - 4</option>
+                <option value="5">ตัวอักษรชุดที่ 5</option>
               </select>
             </li>
             <style media="screen">
@@ -76,10 +80,7 @@
       <div class="container">
         <ul class="nav nav-tabs" role="tablist" style="width:50%;margin:auto">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#romanji_button" role="tab">Romanji Button</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#romanji_text" role="tab">Romanji Character</a>
+            <a class="nav-link active" data-toggle="tab" href="#romanji_text" role="tab">Romanji Character</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#hiragana_text" role="tab">Hiragana Character</a>
@@ -88,102 +89,33 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div class="tab-pane active" id="romanji_button" role="tabpanel">
-            <div class="row" id="hiragana-button" style="padding-top:50px">
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info" value="a" id="a" />
-                <input type="button" class="btn btn-info"  value="i" id="i" />
-                <input type="button" class="btn btn-info"  value="u" id="u" />
-                <input type="button" class="btn btn-info"  value="e" id="e" />
-                <input type="button" class="btn btn-info"  value="o" id="o" />
+          <div class="tab-pane active" id="romanji_text" role="tabpanel">
+              <div class="col-md-12" style="text-align:center;">
+                <input type="text" class="form-control" id="romanji_textbox" placeholder="romanji" value="" style="" />
               </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="ka" id="ka" />
-                <input type="button" class="btn btn-info"  value="ki" id="ki" />
-                <input type="button" class="btn btn-info"  value="ku" id="ku" />
-                <input type="button" class="btn btn-info"  value="ke" id="ke" />
-                <input type="button" class="btn btn-info"  value="ko" id="ko" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="sa" id="sa" />
-                <input type="button" class="btn btn-info"  value="shi" id="shi" />
-                <input type="button" class="btn btn-info"  value="su" id="su" />
-                <input type="button" class="btn btn-info"  value="se" id="se" />
-                <input type="button" class="btn btn-info"  value="so" id="so" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="ta" id="ta" />
-                <input type="button" class="btn btn-info"  value="chi" id="chi" />
-                <input type="button" class="btn btn-info"  value="tsu" id="tsu" />
-                <input type="button" class="btn btn-info"  value="te" id="te" />
-                <input type="button" class="btn btn-info"  value="to" id="to" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="na" id="na" />
-                <input type="button" class="btn btn-info"  value="ni" id="ni" />
-                <input type="button" class="btn btn-info"  value="nu" id="nu" />
-                <input type="button" class="btn btn-info"  value="ne" id="ne" />
-                <input type="button" class="btn btn-info"  value="no" id="no" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="ha" id="ha" />
-                <input type="button" class="btn btn-info"  value="hi" id="hi" />
-                <input type="button" class="btn btn-info"  value="fu" id="fu" />
-                <input type="button" class="btn btn-info"  value="he" id="he" />
-                <input type="button" class="btn btn-info"  value="ho" id="ho" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="ma" id="ma" />
-                <input type="button" class="btn btn-info"  value="mi" id="mi" />
-                <input type="button" class="btn btn-info"  value="mu" id="mu" />
-                <input type="button" class="btn btn-info"  value="me" id="me" />
-                <input type="button" class="btn btn-info"  value="mo" id="mo" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="ya" id="ya"  style="margin-right:105px"/>
-                <input type="button" class="btn btn-info"  value="yu" id="yu" />
-                <input type="button" class="btn btn-info"  value="yo" id="yo"  style="margin-left:105px"/>
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="ra" id="ra" />
-                <input type="button" class="btn btn-info"  value="ri" id="ri" />
-                <input type="button" class="btn btn-info"  value="ru" id="ru" />
-                <input type="button" class="btn btn-info"  value="re" id="re" />
-                <input type="button" class="btn btn-info"  value="ro" id="ro" />
-              </div>
-              <div class="col-md-12" style="text-align: center;padding-top:10px">
-                <input type="button" class="btn btn-info"  value="wa" id="wa" style="margin-right:105px"/>
-                <input type="button" class="btn btn-info"  value="wo" id="wo" />
-                <input type="button" class="btn btn-info"  value="nn" id="nn" style="margin-left:105px"/>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="romanji_text" role="tabpanel">
-            <div class="col-md-12" style="text-align: center;padding:50px">
-              <div class="col-md-6" style="text-align:right">Romanji :</div>
-              <div class="col-md-6" style="text-align:left"><input type="text" class="form-control" id="romanji_textbox" placeholder="romanji" value="" style="width:100px;text-align:center"></div>
-            </div>
           </div>
           <div class="tab-pane" id="hiragana_text" role="tabpanel">
-            <div class="col-md-12" style="text-align: center;padding:50px">
-              <div class="col-md-6" style="text-align:right">Hiragana :</div>
-              <div class="col-md-6" style="text-align:left"><input type="text" class="form-control" id="hiragana_textbox" placeholder="hiragana" value="" style="width:100px;text-align:center"></div>
-            </div>
+              <div class="col-md-12" style="text-align:center">
+                <input type="text" class="form-control" id="hiragana_textbox" placeholder="hiragana" value="" style="">
+              </div>
           </div>
         </div>
+        <style>
+          #romanji_textbox,#hiragana_textbox{
+            width: 300px;
+            height: 150px;
+            font-size: 70px;
+            text-align: center;
+            margin: auto;
+            margin-top: 25px;
+          }
+        </style>
 
 
 
 
       </div>
     </div> <!-- /container -->
-    <style>
-      #hiragana-button input{
-        font-size:25px;
-        font-weight: bolder;
-        width:100px;
-      }
-    </style>
 
 
     <div id="myModal" class="modal fade" role="dialog">
