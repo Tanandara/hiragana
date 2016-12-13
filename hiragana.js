@@ -151,7 +151,7 @@ function hiragana_level_change(level){
                 [
                   "kya",		    "kyu",			    "kyo",
                   "sha",	     	"shu",     			"sho",
-                  "cha",	     	"chi",     			"cho",
+                  "cha",	     	"chu",     			"cho",
                   "nya",	     	"nyu",     			"nyo",
                   "hya",	     	"hyu",     			"hyo",
                   "mya",	     	"myu",     			"myo",
@@ -211,7 +211,7 @@ function hiragana_level_change(level){
                   "pa",	 "pi",	"pu",   "pe",  	"po",
                   "kya",		    "kyu",			    "kyo",
                   "sha",	     	"shu",     			"sho",
-                  "cha",	     	"chi",     			"cho",
+                  "cha",	     	"chu",     			"cho",
                   "nya",	     	"nyu",     			"nyo",
                   "hya",	     	"hyu",     			"hyo",
                   "mya",	     	"myu",     			"myo",

@@ -47,7 +47,7 @@ var romanji =
   "pa",	 "pi",	"pu",   "pe",  	"po",
   "kya",		    "kyu",			    "kyo",
   "sha",	     	"shu",     			"sho",
-  "cha",	     	"chi",     			"cho",
+  "cha",	     	"chu",     			"cho",
   "nya",	     	"nyu",     			"nyo",
   "hya",	     	"hyu",     			"hyo",
   "mya",	     	"myu",     			"myo",
