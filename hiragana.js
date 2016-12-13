@@ -157,7 +157,7 @@ function hiragana_level_change(level){
                   "mya",	     	"myu",     			"myo",
                   "rya",    		"ryu",      		"ryo",
                   "gya",	     	"gyu",     			"gyo",
-                  "ja",		     	"ji",      			"jo",
+                  "ja",		     	"ju",      			"jo",
                   "bya",	     	"byu",     			"byo",
                   "pya",	     	"pyu",     			"pyo"
                 ];
@@ -217,7 +217,7 @@ function hiragana_level_change(level){
                   "mya",	     	"myu",     			"myo",
                   "rya",    		"ryu",      		"ryo",
                   "gya",	     	"gyu",     			"gyo",
-                  "ja",		     	"ji",      			"jo",
+                  "ja",		     	"ju",      			"jo",
                   "bya",	     	"byu",     			"byo",
                   "pya",	     	"pyu",     			"pyo"
                 ];
@@ -296,12 +296,12 @@ $(function(){
 });
 
 // ตรวจสอบผลลัพท์
-function check_result(button_value,text){
+function check_result(value,text){
   if(
-    hiragana.indexOf(text) == romanji.indexOf(button_value) ||
-    hiragana.indexOf(text) == hiragana.indexOf(button_value)
+    hiragana.indexOf(text) == romanji.indexOf(value) ||
+    hiragana.indexOf(text) == hiragana.indexOf(value)
     ){
-    speak();
+    speak(value);
     count+=3;
     toastr.success("+1 score");
     toastr.success("+2 seconds");
@@ -388,7 +388,9 @@ function gameover(){
 }
 
 
-function speak(){
-  //var url = "https://translate.google.com/translate.tts?ie=UTF-8&q=" + $("#random_char").text() +"&tl=ja&&total=1&idx=0&textlen=1&tk=994568.617104&client=t&prev=input";
-  //$("#speak_japan").attr("src",url);
+function speak(value){
+  value = !/[A-Za-z]+/gm.test(value) ? romanji[hiragana.indexOf(value)] : value ;
+  toastr.info('play '+value+'.mp3');
+  var audio = new Audio('/speech/'+value+'.mp3');
+  audio.play();
 }

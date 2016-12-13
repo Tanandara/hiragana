@@ -53,7 +53,7 @@ var romanji =
   "mya",	     	"myu",     			"myo",
   "rya",    		"ryu",      		"ryo",
   "gya",	     	"gyu",     			"gyo",
-  "ja",		     	"ji",      			"jo",
+  "ja",		     	"ju",      			"jo",
   "bya",	     	"byu",     			"byo",
   "pya",	     	"pyu",     			"pyo"
 ];
@@ -63,7 +63,7 @@ var exec = require('child_process').exec;
 hiragana.forEach((n,i)=>{
   token.get(n).then(x=>{
       console.log(n,i,romanji[i],x.value);
-      exec(`curl "https://translate.google.com/translate_tts?ie=UTF-8&q=`+encodeURI(hiragana[i])+`&tl=ja&total=1&idx=0&textlen=`+hiragana[i].length+`&tk=`+x.value+`&client=t&prev=input" -H 'Referer: https://translate.google.com/' -H 'Accept-Encoding: identity;q=1, *;q=0' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36' -H 'Range: bytes=0-' --compressed -o `+romanji[i]+`.mp3`, function(error, stdout, stderr) {
+      exec(`curl "https://translate.google.com/translate_tts?ie=UTF-8&q=`+encodeURI(hiragana[i])+`&tl=ja&total=1&idx=0&textlen=`+hiragana[i].length+`&tk=`+x.value+`&client=t&prev=input" -H 'Referer: https://translate.google.com/' -H 'Accept-Encoding: identity;q=1, *;q=0' -H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36' -H 'Range: bytes=0-' --compressed -o speech/`+romanji[i]+`.mp3`, function(error, stdout, stderr) {
           console.log('stdout: ' + stdout);
           console.log('stderr: ' + stderr);
       });
