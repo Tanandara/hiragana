@@ -391,6 +391,6 @@ function gameover(){
 function speak(value){
   value = !/[A-Za-z]+/gm.test(value) ? romanji[hiragana.indexOf(value)] : value ;
   toastr.info('play '+value+'.mp3');
-  var audio = new Audio('/speech/'+value+'.mp3');
+  var audio = new Audio('speech/'+value+'.mp3');
   audio.play();
 }
